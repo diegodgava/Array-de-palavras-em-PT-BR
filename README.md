@@ -1,0 +1,1 @@
+# Array-de-palavras-em-PT-BR
