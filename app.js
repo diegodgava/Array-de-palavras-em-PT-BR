@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // Lê o arquivo de texto com a lista de palavras
-fs.readFile('palavras.txt', 'utf-8', (err, data) => {
+fs.readFile('todas_as_palavras.txt', 'utf-8', (err, data) => {
   if (err) throw err;
 
   // Separa as palavras por quebra de linha e cria um array
@@ -14,7 +14,7 @@ fs.readFile('palavras.txt', 'utf-8', (err, data) => {
   });
 
   // Cria um novo arquivo e escreve o novo array nele
-  fs.writeFile('todas_as_palavras.txt', `module.exports = ${JSON.stringify(palavrasFiltradas)};`, (err) => {
+  fs.writeFile('palavras_filtradas.js', `module.exports = ${JSON.stringify(palavrasFiltradas)};`, (err) => {
     if (err) throw err;
     console.log('O arquivo foi salvo com sucesso!');
   });
